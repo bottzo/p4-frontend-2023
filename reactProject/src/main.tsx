@@ -12,9 +12,12 @@ const user : tUser = {
 
 function getFullName(user: tUser)
 {
-  return `${user.name} ${user.surname}`
+  return `${user.name} ${user.surname}`;
 }
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <h1>Hi react from {getFullName(user)}</h1>
+  <div>
+    <h1>Hi react from {getFullName(user)}</h1>
+    <h1>Hi react from {getFullName({name:"Bob", surname:"Smth"})}</h1>
+  </div>
 );
