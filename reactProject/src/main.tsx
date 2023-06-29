@@ -26,7 +26,7 @@ const namesJsx = [<li key="abc">"James"</li>, <li key="def">"Paulo"</li>];
 let element = <ul>{namesJsx}</ul>;
 
 const names = ["James", "Paulo"];
-element = <ul>{names.map((element)=> <li>{element}</li>)}</ul>;
+element = <ul>{names.map((element,idx)=> <li key={idx}>{element}</li>)}</ul>;
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 element
