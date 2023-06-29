@@ -5,16 +5,16 @@ import './index.css'
 
 type tUser = {name:string, surname:string}
 
-let user : tUser = {
+const user : tUser = {
   name:"James",
-  surname: "bond"
+  surname: "Bond"
 }
 
-function GetFullName(user: tUser)
+function getFullName(user: tUser)
 {
   return `${user.name} ${user.surname}`
 }
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <h1>Hi react from {GetFullName(user)}</h1>
+  <h1>Hi react from {getFullName(user)}</h1>
 );
