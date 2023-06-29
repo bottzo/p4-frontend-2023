@@ -22,7 +22,7 @@ const elements = (
   </div>
 );
 
-const names = [<li>"James"</li>, <li>"Paulo"</li>];
+const names = [<li key="abc">"James"</li>, <li key="def">"Paulo"</li>];
 const element = <ul>{names}</ul>;
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
