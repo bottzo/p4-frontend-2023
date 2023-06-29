@@ -22,8 +22,11 @@ const elements = (
   </div>
 );
 
-const names = [<li key="abc">"James"</li>, <li key="def">"Paulo"</li>];
-const element = <ul>{names}</ul>;
+const namesJsx = [<li key="abc">"James"</li>, <li key="def">"Paulo"</li>];
+let element = <ul>{namesJsx}</ul>;
+
+const names = ["James", "Paulo"];
+element = <ul>{names.map((element)=> <li>{element}</li>)}</ul>;
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 element
