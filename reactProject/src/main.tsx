@@ -22,8 +22,8 @@ const elements = (
   </div>
 );
 
-const myArr = [1, 3*4, null, " Hola"];
-const element = <h1>{myArr}</h1>;
+const names = [<li>"James"</li>, <li>"Paulo"</li>];
+const element = <ul>{names}</ul>;
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 element
