@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 //import App from './App.tsx'
 import './index.css'
 
-type tUser = {name:string, surname:string}
+type tUser = {name:string, surname:string};
 
 const user : tUser = {
   name:"James",
@@ -29,5 +29,10 @@ const names = ["James", "Paulo"];
 element = <ul>{names.map((element,idx)=> <li key={idx}>{element}</li>)}</ul>;
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-element
+Welcome({name:"James", surname:"Bond"})
 );
+
+
+function Welcome(props: tUser){
+  return <h1>Hola {props.name}</h1>;
+}
