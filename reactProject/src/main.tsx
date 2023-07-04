@@ -29,7 +29,7 @@ const names = ["James", "Paulo"];
 element = <ul>{names.map((element,idx)=> <li key={idx}>{element}</li>)}</ul>;
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-Welcome({name:"James", surname:"Bond"})
+<Welcome name ="James" surname = "Bond"/>
 );
 
 
