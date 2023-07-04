@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-//import App from './App.tsx'
 import './index.css'
 
-type tUser = {name:string, surname:string};
+import Welcome from "./Components/Welcome"
+import {type tUser} from "./Components/Welcome"
 
 const user : tUser = {
   name:"James",
@@ -29,10 +29,9 @@ const names = ["James", "Paulo"];
 element = <ul>{names.map((element,idx)=> <li key={idx}>{element}</li>)}</ul>;
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-<Welcome name ="James" surname = "Bond"/>
+<>
+  <Welcome name ="James" surname = "Bond"/>
+  <Welcome name ="Paco" surname = "Bond"/>
+  <Welcome name ="Mary" surname = "Bond"/>
+</>
 );
-
-
-function Welcome(props: tUser){
-  return <h1>Hola {props.name}</h1>;
-}
