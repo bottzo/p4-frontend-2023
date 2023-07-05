@@ -12,12 +12,12 @@ return (
 };
 
 
-export function Avatar(props: {user: author})
+function Avatar(props: {user: author})
 {
     return <img className="Avatar" src={props.user.avatarUrl} alt={props.user.name} />;
 }
 
-export function UserInfo(props: {user: author})
+function UserInfo(props: {user: author})
 {
     return (
     <div className="UserInfo">
