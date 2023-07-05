@@ -4,6 +4,7 @@ import './index.css'
 
 import Welcome from "./Components/Welcome"
 import {type tUser} from "./Components/Welcome"
+import {Comment} from "./Components/Comment"
 
 const user : tUser = {
   name:"James",
@@ -33,5 +34,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <Welcome name ="James" surname = "Bond"/>
   <Welcome name ="Paco" surname = "Bond"/>
   <Welcome name ="Mary" surname = "Bond"/>
+  <Comment author = {{avatarUrl: "https://f.com", name:"James"}} text= "bla bla bla"/>
 </>
 );
