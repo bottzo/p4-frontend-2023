@@ -29,7 +29,11 @@ export default class Clock extends React.Component{
 
     componentDidMount(): void {
         const tick = () => { this.setState({date: new Date().toLocaleTimeString()}); }
-        setInterval(tick, 1000);
+        this.timerId = setInterval(tick, 1000);
+    }
+
+    componentWillUnmount(): void {
+        clearInterval(this.timerId);
     }
 }
 
