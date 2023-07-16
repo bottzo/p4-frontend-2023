@@ -16,7 +16,6 @@ export default class Clock extends React.Component{
     constructor(props){
         super(props);
         this.state = {date: new Date().toLocaleTimeString()};
-        setInterval(this.tick, 1000);
     }
 
     render(): React.ReactNode {
@@ -28,7 +27,10 @@ export default class Clock extends React.Component{
         )
     }
 
-    tick = () => { this.setState({date: new Date().toLocaleTimeString()}); }
+    componentDidMount(): void {
+        const tick = () => { this.setState({date: new Date().toLocaleTimeString()}); }
+        setInterval(tick, 1000);
+    }
 }
 
 function RandomFunc (a)
