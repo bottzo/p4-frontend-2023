@@ -11,13 +11,13 @@ return (
  </div> )
 };
 
-
-function Avatar(props: {user: author})
+//Don't need to write the return type JSX.Element. Why??
+function Avatar(props: {user: author}) : JSX.Element
 {
     return <img className="Avatar" src={props.user.avatarUrl} alt={props.user.name} />;
 }
 
-function UserInfo(props: {user: author})
+function UserInfo(props: {user: author}) : JSX.Element
 {
     return (
     <div className="UserInfo">
