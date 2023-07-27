@@ -12,7 +12,7 @@ class ActionLink extends React.Component{
   render(): React.ReactNode {
     return(
     <>
-      <a href="#" onClick={(e) => {e.preventDefault(); this.setState({active: !this.state.active})}}>{(this.state.active) ? "Hide" : "Show"}</a>
+      <a href="#" onClick={(e) => {e.preventDefault(); this.setState( (prevState) => ({active: !prevState.active})) }}>{(this.state.active) ? "Hide" : "Show"}</a>
       {this.state.active && this.props.obj};
     </>
     );
