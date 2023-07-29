@@ -4,10 +4,10 @@ export default class NameForm extends React.Component{
     constructor(props)
     {
         super(props);
-        this.state = {iValue:"", sValue:""}; 
+        this.state = {iValue: "", sValue: ""}; 
     }
 
-    handleChange = (e) => { e.preventDefault(); this.setState({value: e.target.value.toUpperCase()})}
+    handleChange = (e) => { e.preventDefault(); this.setState({iValue: e.target.value.toUpperCase()})}
 
     handleSubmit = e => {e.preventDefault(); alert(`Se ha decidido el nombre ${this.state.iValue}`)}
 
