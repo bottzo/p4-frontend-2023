@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Clock from "./Clock"
 import Todos from './Todos'
+import NameForm from './form'
 
 class ActionLink extends React.Component{
   constructor(props)
@@ -12,7 +13,7 @@ class ActionLink extends React.Component{
   render(): React.ReactNode {
     return(
     <>
-      <a href="#" onClick={(e) => {e.preventDefault(); this.setState( (prevState) => ({active: !prevState.active})) }}>{(this.state.active) ? "Hide" : "Show"}</a>
+      <a href="#" onClick={(e) => { e.preventDefault(); this.setState( (prevState) => ({active: !prevState.active}) ) }}>{(this.state.active) ? "Hide" : "Show"}</a>
       {this.state.active && this.props.obj};
     </>
     );
@@ -22,6 +23,7 @@ class ActionLink extends React.Component{
 ReactDOM.createRoot(document.getElementById('root')!).render(
   (<>
     <h1>Hi</h1>
+    <NameForm />
     <ActionLink obj={<Clock color="blue"/>}/>
     <Todos/>
   </>)
