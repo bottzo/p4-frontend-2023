@@ -4,6 +4,7 @@ import Clock from "./Clock"
 import Todos from './Todos'
 import NameForm from './form'
 import FileInput from './FileInput'
+import Temperatures from './Temperatures'
 
 class ActionLink extends React.Component{
   constructor(props)
@@ -24,6 +25,7 @@ class ActionLink extends React.Component{
 ReactDOM.createRoot(document.getElementById('root')!).render(
   (<>
     <h1>Hi</h1>
+    <Temperatures />
     <FileInput />
     <NameForm />
     <ActionLink obj={<Clock color="blue"/>}/>
