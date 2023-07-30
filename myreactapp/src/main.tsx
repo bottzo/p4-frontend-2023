@@ -16,7 +16,7 @@ class ActionLink extends React.Component{
     return(
     <>
       <a href="#" onClick={(e) => { e.preventDefault(); this.setState( (prevState) => ({active: !prevState.active}) ) }}>{(this.state.active) ? "Hide" : "Show"}</a>
-      {this.state.active && this.props.obj};
+      {this.state.active && this.props.children};
     </>
     );
   }
@@ -28,7 +28,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Temperatures />
     <FileInput />
     <NameForm />
-    <ActionLink obj={<Clock color="blue"/>}/>
+    <ActionLink>
+      <Clock color="blue"/>
+    </ActionLink>
     <Todos/>
   </>)
 )
