@@ -10,8 +10,8 @@ export default class Temperatures extends React.Component{
     render(): React.ReactNode {
         return(
             <>
-                <TmpBox num={this.state.fahrenheit} change={this.changeFahrenheit} />
-                <TmpBox num={this.state.celsius} change={this.changeCelcius} />
+                <TmpBox type="fahrenheit" num={this.state.fahrenheit} change={this.changeFahrenheit} />
+                <TmpBox type="celcius" num={this.state.celsius} change={this.changeCelcius} />
             </>
         );
     }
@@ -31,7 +31,10 @@ class TmpBox extends React.Component{
     render(): React.ReactNode {
         return(
             <form>
-                <input type="number" value={this.props.num} onChange={this.props.change}/>
+                <label>
+                    <input type="number" value={this.props.num} onChange={this.props.change}/>
+                    {this.props.type}
+                </label>
             </form>
         );
     }
